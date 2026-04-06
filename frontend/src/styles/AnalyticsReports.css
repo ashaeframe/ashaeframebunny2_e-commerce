@@ -1,0 +1,117 @@
+@import './ManagementCommon.css';
+
+.analytics-charts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.chart-card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-card h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.custom-tooltip {
+  background: white;
+  border: 2px solid #3AB46F;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-tooltip .label {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.custom-tooltip .value {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.reports-section {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reports-section h2 {
+  color: #333;
+  font-size: 20px;
+  margin: 0 0 25px 0;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.metric-item {
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef5ef 100%);
+  border-left: 4px solid #3AB46F;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.metric-label {
+  font-size: 13px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+
+.metric-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #3AB46F;
+}
+
+@media (max-width: 1024px) {
+  .analytics-charts {
+    grid-template-columns: 1fr;
+  }
+
+  .metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-charts {
+    gap: 20px;
+  }
+
+  .chart-card {
+    padding: 15px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .metric-item {
+    padding: 15px;
+  }
+
+  .metric-value {
+    font-size: 24px;
+  }
+}

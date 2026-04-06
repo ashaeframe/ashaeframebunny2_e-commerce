@@ -1,0 +1,45 @@
+@import './ManagementCommon.css';
+
+.chart-container {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.chart-container h2 {
+  margin: 0 0 20px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.custom-tooltip {
+  background: white;
+  border: 2px solid #3AB46F;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.custom-tooltip .label {
+  margin: 0;
+  font-weight: 600;
+  color: #333;
+}
+
+.custom-tooltip .value {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    padding: 15px;
+  }
+
+  .chart-container h2 {
+    font-size: 16px;
+  }
+}

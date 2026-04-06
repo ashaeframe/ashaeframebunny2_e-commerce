@@ -1,0 +1,226 @@
+@import './ManagementCommon.css';
+
+.notifications-filter {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border: 2px solid #ddd;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover {
+  border-color: #3AB46F;
+  color: #3AB46F;
+}
+
+.filter-btn.active {
+  background: linear-gradient(135deg, #3AB46F 0%, #FCB045 100%);
+  border-color: transparent;
+  color: white;
+}
+
+.notifications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.notification-item {
+  background: white;
+  border-left: 5px solid #3AB46F;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+}
+
+.notification-item:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.notification-item.unread {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.notification-icon {
+  font-size: 32px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.notification-content {
+  flex: 1;
+}
+
+.notification-content h3 {
+  margin: 0 0 8px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.notification-content p {
+  margin: 0 0 8px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.notification-time {
+  font-size: 12px;
+  color: #999;
+}
+
+.notification-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.mark-read-btn {
+  background: #3AB46F;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mark-read-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.delete-btn {
+  background: #FD1D1D;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.delete-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+}
+
+.empty-state p {
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .notifications-filter {
+    padding: 15px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .notification-item {
+    padding: 15px;
+    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .notification-icon {
+    font-size: 28px;
+  }
+
+  .notification-content h3 {
+    font-size: 15px;
+  }
+
+  .notification-content p {
+    font-size: 13px;
+  }
+
+  .notification-actions {
+    align-self: flex-end;
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-filter {
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .filter-btn {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .notification-item {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .notification-icon {
+    font-size: 24px;
+    min-width: 40px;
+  }
+
+  .notification-content h3 {
+    font-size: 13px;
+  }
+
+  .notification-content p {
+    font-size: 12px;
+  }
+
+  .mark-read-btn,
+  .delete-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+}
