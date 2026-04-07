@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = "https://ashaeframebunny2-e-commerce.onrender.com/api";
 
 // Get token from localStorage
 const getToken = () => localStorage.getItem('authToken');

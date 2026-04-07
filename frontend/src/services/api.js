@@ -1,7 +1,10 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:8080/api",
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
-export const fetchProducts = () => API.get("/products");
+export const fetchProducts = () => API.get("/api/products");
+export const loginUser = (data) => API.post("/api/auth/login", data);
+
+export default API;
