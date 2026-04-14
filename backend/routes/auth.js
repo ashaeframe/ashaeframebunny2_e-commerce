@@ -98,6 +98,11 @@ router.post('/login', async (req, res) => {
       const msg = process.env.NODE_ENV === 'production' ? 'Invalid credentials' : 'User not found';
       return res.status(401).json({ error: msg });
     }
+    // Check password field exists
+      if (!user.password || typeof user.password !== 'string') {
+      console.error('Login error: user password is missing or invalid for', email);
+      return res.status(500).json({ error: 'Account data is invalid. Please register again.' });
+      }
 
     // Check password
     const isPasswordValid = await bcrypt.compare(password, user.password);
