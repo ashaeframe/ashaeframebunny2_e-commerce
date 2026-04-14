@@ -30,9 +30,13 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 const corsOptions = {
-  origin: process.env.NODE_ENV === 'production' ? process.env.FRONTEND_URL : true,
+  origin: [
+    "http://localhost:5173",
+    "https://jade-lolly-58cf08.netlify.app"
+  ],
   credentials: true,
 };
+
 app.use(cors(corsOptions));
 
 // Request logging middleware
